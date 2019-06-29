@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to TAP20’s documentation! &#8212; TAP20 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-tap20-s-documentation">
+<h1>Welcome to TAP20’s documentation!<a class="headerlink" href="#welcome-to-tap20-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="module-cars">
+<span id="car-module"></span><h1>CAR MODULE<a class="headerlink" href="#module-cars" title="Permalink to this headline">¶</a></h1>
+<p>This module creates a Car store that gets items form a Car Factory.</p>
+<dl class="class">
+<dt id="cars.BMW">
+<em class="property">class </em><code class="sig-prename descclassname">cars.</code><code class="sig-name descname">BMW</code><span class="sig-paren">(</span><em class="sig-param">**arg</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.BMW" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="cars.BMW.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">**arg</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.BMW.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a BMW Class.
+Inherits CAR</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg</strong> (<em>dict</em>) – Contains the information about a BMW car.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of the car. Should be part of arg. Key is «type».</p></li>
+<li><p><strong>doors</strong> (<em>int</em>) – The doors that the car has.  Should be part of arg. Key is «doors».</p></li>
+<li><p><strong>fuel</strong> (<a class="reference internal" href="#cars.Fuel" title="cars.Fuel"><em>Fuel</em></a>) – The fuel that the car needs. Should be part of arg. Key is «fuel».</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cars.Car">
+<em class="property">class </em><code class="sig-prename descclassname">cars.</code><code class="sig-name descname">Car</code><a class="headerlink" href="#cars.Car" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single Car Class
+All Car types inherit from it.</p>
+<dl class="method">
+<dt id="cars.Car.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cars.Car.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the Car constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>self</strong> (<a class="reference internal" href="#cars.Car" title="cars.Car"><em>Car</em></a>) – The instance of this object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="cars.Car.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cars.Car.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prnts:
+This car is a {s.model}: {s.type}, Wow!
+The car has {s.doors} doors and {s.seets} seets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A custom string showing off the make model and capacity of the current car.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="cars.Car.print_model">
+<code class="sig-name descname">print_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cars.Car.print_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the model of the current car using self.model and self.type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>self</strong> (<a class="reference internal" href="#cars.Car" title="cars.Car"><em>Car</em></a>) – The instance of this object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Nothing</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="cars.Car.print_space">
+<code class="sig-name descname">print_space</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cars.Car.print_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the space in the current car.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>self</strong> (<a class="reference internal" href="#cars.Car" title="cars.Car"><em>Car</em></a>) – The instance of this object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Nothing</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cars.CarStore">
+<em class="property">class </em><code class="sig-prename descclassname">cars.</code><code class="sig-name descname">CarStore</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.CarStore" title="Permalink to this definition">¶</a></dt>
+<dd><p>The car store</p>
+<dl class="method">
+<dt id="cars.CarStore.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.CarStore.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cars.CarStore.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cars.CarStore.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cars.CarStore.show_car">
+<code class="sig-name descname">show_car</code><span class="sig-paren">(</span><em class="sig-param">car=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.CarStore.show_car" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows a car and what fuel it uses.
+If car is not defined gets one from the factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>car</strong> (<a class="reference internal" href="#cars.Car" title="cars.Car"><em>Car</em></a>) – A car to be displayed. Default: None</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Nothing</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cars.Fuel">
+<em class="property">class </em><code class="sig-prename descclassname">cars.</code><code class="sig-name descname">Fuel</code><span class="sig-paren">(</span><em class="sig-param">**arg</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.Fuel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Fuel of a Car.</p>
+<dl class="method">
+<dt id="cars.Fuel.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">**arg</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.Fuel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Fuel of a Car.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg</strong> (<em>dict</em>) – The information about the Fuel</p></li>
+<li><p><strong>liters</strong> (<em>int</em>) – How many liters of fuel needed.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – What type of fuel needed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="cars.Fuel.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cars.Fuel.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints:
+It uses {s.liters}L of {s.type}¢.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A Custom string showing what fuel it is,</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cars.Lada">
+<em class="property">class </em><code class="sig-prename descclassname">cars.</code><code class="sig-name descname">Lada</code><span class="sig-paren">(</span><em class="sig-param">**arg</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.Lada" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="cars.Lada.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">**arg</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.Lada.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Lada Class.
+Inherits CAR</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg</strong> (<em>dict</em>) – Contains the information about a Lada car.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of the car. Should be part of arg. Key is «type».</p></li>
+<li><p><strong>doors</strong> (<em>int</em>) – The doors that the car has.  Should be part of arg. Key is «doors».</p></li>
+<li><p><strong>fuel</strong> (<a class="reference internal" href="#cars.Fuel" title="cars.Fuel"><em>Fuel</em></a>) – The fuel that the car needs. Should be part of arg. Key is «fuel».</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cars.Mercedes">
+<em class="property">class </em><code class="sig-prename descclassname">cars.</code><code class="sig-name descname">Mercedes</code><span class="sig-paren">(</span><em class="sig-param">**arg</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.Mercedes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="cars.Mercedes.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">**arg</em><span class="sig-paren">)</span><a class="headerlink" href="#cars.Mercedes.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Mercedes Class.
+Inherits CAR</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg</strong> (<em>dict</em>) – Contains the information about a Mercedes car.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of the car. Should be part of arg. Key is «type».</p></li>
+<li><p><strong>doors</strong> (<em>int</em>) – The doors that the car has.  Should be part of arg. Key is «doors».</p></li>
+<li><p><strong>fuel</strong> (<a class="reference internal" href="#cars.Fuel" title="cars.Fuel"><em>Fuel</em></a>) – The fuel that the car needs. Should be part of arg. Key is «fuel».</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">TAP20</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Stian.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
